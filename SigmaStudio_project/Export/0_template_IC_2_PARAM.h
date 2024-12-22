@@ -1,7 +1,7 @@
 /*
  * File:           C:\Users\PaulH\Documents\Arduino\AudioAmplifierADAU1701\SigmaStudio_project\Export\0_template_IC_2_PARAM.h
  *
- * Created:        Sunday, December 22, 2024 4:16:02 PM
+ * Created:        Sunday, December 22, 2024 10:30:07 PM
  * Description:    0_template:IC 2 parameter RAM definitions.
  *
  * This software is distributed in the hope that it will be useful,

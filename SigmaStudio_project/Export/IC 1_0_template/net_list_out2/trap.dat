@@ -1,3 +1,8 @@
 Instance  3 Signal ReadBack1_ReadBackAlg1 trap value 12 register MAC_out
-Instance  9 Signal CH0_RMS_ReadBackAlg2 trap value 85 register MAC_out
-Instance  10 Signal CH1_RMS_ReadBackAlg3 trap value 88 register MAC_out
+Instance  11 Signal CH0_RMS_ReadBackAlg2 trap value 91 register MAC_out
+Instance  12 Signal CH1_RMS_ReadBackAlg3 trap value 94 register MAC_out
+Instance  24 Signal BAND0_RMS_ReadBackAlg4 trap value 266 register MAC_out
+Instance  25 Signal BAND1_RMS_ReadBackAlg5 trap value 269 register MAC_out
+Instance  26 Signal BAND2_RMS_ReadBackAlg6 trap value 272 register MAC_out
+Instance  27 Signal BAND3_RMS_ReadBackAlg7 trap value 275 register MAC_out
+Instance  28 Signal BAND4_RMS_ReadBackAlg8 trap value 278 register MAC_out

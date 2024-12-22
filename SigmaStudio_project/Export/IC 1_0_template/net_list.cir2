@@ -1,10 +1,28 @@
 0 ICSigma100In1 O_C0_A0_P1_out Link1 O_C0_A0_P2_out Link2
 1 DCInpAlg1 O_C20_A0_P1_out Link0
 2 ReadBackAlg1 I_C15_A0_P1_in Link0
-3 EQ1940DualS1 I_C22_A0_P1_in Link1 I_C22_A0_P2_in Link2 O_C22_A0_P3_out Link5 O_C22_A0_P4_out Link6
-4 ICSigma100Out1 I_C11_A0_P1_in Link5
-5 ICSigma100Out2 I_C13_A0_P1_in Link6
-6 MonoRunAvgDetectAlg1 I_C85_A0_P1_in Link5 O_C85_A0_P2_out Link3
-7 MonoRunAvgDetectAlg2 I_C88_A0_P1_in Link6 O_C88_A0_P2_out Link4
-8 ReadBackAlg2 I_C56_A0_P1_in Link3
-9 ReadBackAlg3 I_C59_A0_P1_in Link4
+3 EQ1940DualS1 I_C22_A0_P1_in Link1 I_C22_A0_P2_in Link2 O_C22_A0_P3_out Link17 O_C22_A0_P4_out Link18
+4 ICSigma100Out1 I_C11_A0_P1_in Link17
+5 ICSigma100Out2 I_C13_A0_P1_in Link18
+6 MonoRunAvgDetectAlg1 I_C85_A0_P1_in Link17 O_C85_A0_P2_out Link3
+7 MonoRunAvgDetectAlg2 I_C88_A0_P1_in Link18 O_C88_A0_P2_out Link4
+8 Gain1940AlgNS1 I_C103_A0_P1_in Link17 O_C103_A0_P2_out Link5
+9 Gain1940AlgNS2 I_C106_A0_P1_in Link18 O_C106_A0_P2_out Link6
+10 ReadBackAlg2 I_C56_A0_P1_in Link3
+11 ReadBackAlg3 I_C59_A0_P1_in Link4
+12 AdderAlg1 I_C113_A0_P2_in Link5 I_C113_A0_P3_in Link6 O_C113_A0_P1_out Link19
+13 EQ1940SingleS1 I_C126_A0_P1_in Link19 O_C126_A0_P2_out Link8
+14 EQ1940SingleS2 I_C129_A0_P1_in Link19 O_C129_A0_P2_out Link13
+15 EQ1940SingleS3 I_C132_A0_P1_in Link19 O_C132_A0_P2_out Link14
+16 EQ1940SingleS4 I_C135_A0_P1_in Link19 O_C135_A0_P2_out Link15
+17 EQ1940SingleS5 I_C138_A0_P1_in Link19 O_C138_A0_P2_out Link16
+18 MonoRunAvgDetectAlg3 I_C148_A0_P1_in Link8 O_C148_A0_P2_out Link7
+19 MonoRunAvgDetectAlg4 I_C170_A0_P1_in Link13 O_C170_A0_P2_out Link9
+20 MonoRunAvgDetectAlg5 I_C175_A0_P1_in Link14 O_C175_A0_P2_out Link10
+21 MonoRunAvgDetectAlg6 I_C186_A0_P1_in Link15 O_C186_A0_P2_out Link11
+22 MonoRunAvgDetectAlg7 I_C194_A0_P1_in Link16 O_C194_A0_P2_out Link12
+23 ReadBackAlg4 I_C145_A0_P1_in Link7
+24 ReadBackAlg5 I_C167_A0_P1_in Link9
+25 ReadBackAlg6 I_C178_A0_P1_in Link10
+26 ReadBackAlg7 I_C183_A0_P1_in Link11
+27 ReadBackAlg8 I_C191_A0_P1_in Link12

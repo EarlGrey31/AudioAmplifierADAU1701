@@ -19,6 +19,8 @@
 #define I2C_SDA_AUX 2
 #define I2C_SCL_AUX 3
 
+#define NBR_EQ_FREQ_BANDS 5
+
 // The first parameter is the Wire object we'll be using when communicating wth the DSP
 // The second parameter is the DSP i2c address, which is defined in the parameter file
 // The third parameter is the sample rate
@@ -79,11 +81,26 @@ void setup() {
   frontpanel->initAnimation();
 }
 
-void updateFrontpanel(uint32_t rms_left, uint32_t rms_right) {
+void updateFrontpanel() {
+  uint32_t currentLevelCH0  = dsp.readBack(MOD_CH0_RMS_ALG0_VAL0_ADDR,  MOD_CH0_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t currentLevelCH1  = dsp.readBack(MOD_CH1_RMS_ALG0_VAL0_ADDR,  MOD_CH1_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t currentLevelBand0  = dsp.readBack(MOD_BAND0_RMS_ALG0_VAL0_ADDR,  MOD_BAND0_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t currentLevelBand1  = dsp.readBack(MOD_BAND1_RMS_ALG0_VAL0_ADDR,  MOD_BAND1_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t currentLevelBand2  = dsp.readBack(MOD_BAND2_RMS_ALG0_VAL0_ADDR,  MOD_BAND2_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t currentLevelBand3  = dsp.readBack(MOD_BAND3_RMS_ALG0_VAL0_ADDR,  MOD_BAND3_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t currentLevelBand4  = dsp.readBack(MOD_BAND4_RMS_ALG0_VAL0_ADDR,  MOD_BAND4_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t bands[] = {currentLevelBand0, currentLevelBand1, currentLevelBand2, currentLevelBand3, currentLevelBand4};
+
+  //Serial.printf("B0: %d; B1: %d; B2: %d; B3: %d; B4: %d\n", currentLevelBand0, currentLevelBand1, currentLevelBand2, currentLevelBand3, currentLevelBand4);
+
   frontpanel->read();
-  uint8_t led_left = Frontpanel::ledFromRMS(rms_left);
-  uint8_t led_right = Frontpanel::ledFromRMS(rms_right);
-  Serial.printf("rms_left: %d; decoded: %d\n", rms_left, led_left);
+  uint8_t led_left = Frontpanel::ledFromRMS(currentLevelCH0);
+  uint8_t led_right = Frontpanel::ledFromRMS(currentLevelCH1);
+  uint8_t led_eq_band[NBR_EQ_FREQ_BANDS];
+  for (int i = 0; i < NBR_EQ_FREQ_BANDS; i++) {
+    led_eq_band[i] = Frontpanel::ledFromRMS(bands[i]*10);
+  }
+  Serial.printf("rms_left: %d; decoded: %d\n", currentLevelCH0, currentLevelCH1);
   for (int current_led = 0; current_led < 10; current_led++) {
     if (current_led <= led_left) {
       frontpanel->ledOnBar(0, current_led);
@@ -95,18 +112,20 @@ void updateFrontpanel(uint32_t rms_left, uint32_t rms_right) {
     } else {
       frontpanel->ledOffBar(1, current_led);
     }
+    for (int i = 0; i < NBR_EQ_FREQ_BANDS; i++) {
+      if (current_led <= led_eq_band[i]) {
+        frontpanel->ledOnBar(i+2, current_led);
+      } else {
+        frontpanel->ledOffBar(i+2, current_led);
+      }
+    }
   }
   frontpanel->write();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  uint32_t currentLevelCH0  = dsp.readBack(MOD_CH0_RMS_ALG0_VAL0_ADDR,  MOD_CH0_RMS_ALG0_VAL0_VALUES,  3);
-  uint32_t currentLevelCH1  = dsp.readBack(MOD_CH1_RMS_ALG0_VAL0_ADDR,  MOD_CH1_RMS_ALG0_VAL0_VALUES,  3);
   uint32_t checksum  = dsp.readBack(MOD_READBACK1_ALG0_VAL0_ADDR,  MOD_READBACK1_ALG0_VAL0_VALUES,  3);
-  Serial.printf("Readback checksum: %x\n", checksum);
-  Serial.printf("Readback CH0: %d\n", currentLevelCH0);
-  Serial.printf("Readback CH1: %d\n", currentLevelCH1);
-  updateFrontpanel(currentLevelCH0, currentLevelCH1);
+  //Serial.printf("Readback checksum: %x\n", checksum);
+  updateFrontpanel();
   digitalWrite(PIN_STATUS, !digitalRead(PIN_STATUS));
 }
