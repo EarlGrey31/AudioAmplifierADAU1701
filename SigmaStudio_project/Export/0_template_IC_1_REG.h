@@ -1,7 +1,7 @@
 /*
- * File:           C:\Users\PaulH\Documents\rp2040\SigmaDSP\examples\10_Amp_Test\SigmaStudio_project\Export\0_template_IC_1_REG.h
+ * File:           C:\Users\PaulH\Documents\Arduino\AudioAmplifierADAU1701\SigmaStudio_project\Export\0_template_IC_1_REG.h
  *
- * Created:        Wednesday, December 18, 2024 3:09:18 PM
+ * Created:        Sunday, December 22, 2024 4:16:02 PM
  * Description:    0_template:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,

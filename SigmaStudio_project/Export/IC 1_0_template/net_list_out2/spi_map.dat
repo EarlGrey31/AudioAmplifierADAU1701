@@ -1,0 +1,12 @@
+DCInpAlg1_2 0
+EQ1940DualS10B1_4 1
+EQ1940DualS11B1_4 2
+EQ1940DualS12B1_4 3
+EQ1940DualS11A1_4 4
+EQ1940DualS12A1_4 5
+MonoRunAvgDetectAlg1RMS_7 6
+MonoRunAvgDetectAlg1hold_7 7
+MonoRunAvgDetectAlg1decay_7 8
+MonoRunAvgDetectAlg2RMS_8 9
+MonoRunAvgDetectAlg2hold_8 10
+MonoRunAvgDetectAlg2decay_8 11

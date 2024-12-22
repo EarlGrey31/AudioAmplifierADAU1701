@@ -73,8 +73,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  uint32_t currentLevelLeft  = dsp.readBack(MOD_READBACK1_ALG0_VAL0_ADDR,  MOD_READBACK1_ALG0_VAL0_VALUES,  3);
-  Serial.printf("Readback: %x\n", currentLevelLeft);
+  uint32_t currentLevelCH0  = dsp.readBack(MOD_CH0_RMS_ALG0_VAL0_ADDR,  MOD_CH0_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t currentLevelCH1  = dsp.readBack(MOD_CH1_RMS_ALG0_VAL0_ADDR,  MOD_CH1_RMS_ALG0_VAL0_VALUES,  3);
+  uint32_t checksum  = dsp.readBack(MOD_READBACK1_ALG0_VAL0_ADDR,  MOD_READBACK1_ALG0_VAL0_VALUES,  3);
+  Serial.printf("Readback checksum: %x\n", checksum);
+  Serial.printf("Readback CH0: %d\n", currentLevelCH0);
+  Serial.printf("Readback CH1: %d\n", currentLevelCH1);
   digitalWrite(PIN_STATUS, HIGH);
   delay(200);
   digitalWrite(PIN_STATUS, LOW);

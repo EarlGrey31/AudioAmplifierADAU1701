@@ -1,0 +1,10 @@
+0 ICSigma100In1 O_C0_A0_P1_out Link1 O_C0_A0_P2_out Link2
+1 DCInpAlg1 O_C20_A0_P1_out Link0
+2 ReadBackAlg1 I_C15_A0_P1_in Link0
+3 EQ1940DualS1 I_C22_A0_P1_in Link1 I_C22_A0_P2_in Link2 O_C22_A0_P3_out Link5 O_C22_A0_P4_out Link6
+4 ICSigma100Out1 I_C11_A0_P1_in Link5
+5 ICSigma100Out2 I_C13_A0_P1_in Link6
+6 MonoRunAvgDetectAlg1 I_C85_A0_P1_in Link5 O_C85_A0_P2_out Link3
+7 MonoRunAvgDetectAlg2 I_C88_A0_P1_in Link6 O_C88_A0_P2_out Link4
+8 ReadBackAlg2 I_C56_A0_P1_in Link3
+9 ReadBackAlg3 I_C59_A0_P1_in Link4
