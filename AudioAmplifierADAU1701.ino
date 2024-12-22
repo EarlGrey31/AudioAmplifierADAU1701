@@ -1,10 +1,9 @@
 // Include Wire and SigmaDSP library
 #include <Wire.h>
 #include <SigmaDSP.h>
-
+#include "frontpanel.h"
 // Include generated parameter file
 #include "SigmaDSP_parameters.h"
-#include "TCA9555.h"
 
 #define PIN_ADDR_ADAU 19
 #define PIN_ADAU_RST 15
@@ -25,6 +24,7 @@
 // The third parameter is the sample rate
 // An optional fourth parameter is the pin to physically reset the DSP
 SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 96000.00f, PIN_ADAU_RST);
+Frontpanel *frontpanel;
 
 void setup() {
   // put your setup code here, to run once:
@@ -32,8 +32,12 @@ void setup() {
 
   Wire.setSDA(I2C_SDA_ADAU);
   Wire.setSCL(I2C_SCL_ADAU);
+  Wire1.setSDA(I2C_SDA_AUX);
+  Wire1.setSCL(I2C_SCL_AUX);
 
   Wire.begin();
+  Wire1.begin();
+
   dsp.begin();
   //ee.begin();
   pinMode(PIN_ADAU_RST, OUTPUT);
@@ -69,6 +73,30 @@ void setup() {
   Serial.print(F("\nLoading DSP program... "));
   loadProgram(dsp);
   Serial.println("Done!\n");
+
+  frontpanel = new Frontpanel();
+  //frontpanel->printAddresses();
+  frontpanel->initAnimation();
+}
+
+void updateFrontpanel(uint32_t rms_left, uint32_t rms_right) {
+  frontpanel->read();
+  uint8_t led_left = Frontpanel::ledFromRMS(rms_left);
+  uint8_t led_right = Frontpanel::ledFromRMS(rms_right);
+  Serial.printf("rms_left: %d; decoded: %d\n", rms_left, led_left);
+  for (int current_led = 0; current_led < 10; current_led++) {
+    if (current_led <= led_left) {
+      frontpanel->ledOnBar(0, current_led);
+    } else {
+      frontpanel->ledOffBar(0, current_led);
+    }
+    if (current_led <= led_right) {
+      frontpanel->ledOnBar(1, current_led);
+    } else {
+      frontpanel->ledOffBar(1, current_led);
+    }
+  }
+  frontpanel->write();
 }
 
 void loop() {
@@ -79,8 +107,6 @@ void loop() {
   Serial.printf("Readback checksum: %x\n", checksum);
   Serial.printf("Readback CH0: %d\n", currentLevelCH0);
   Serial.printf("Readback CH1: %d\n", currentLevelCH1);
-  digitalWrite(PIN_STATUS, HIGH);
-  delay(200);
-  digitalWrite(PIN_STATUS, LOW);
-  delay(200);
+  updateFrontpanel(currentLevelCH0, currentLevelCH1);
+  digitalWrite(PIN_STATUS, !digitalRead(PIN_STATUS));
 }
