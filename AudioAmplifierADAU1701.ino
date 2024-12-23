@@ -25,7 +25,7 @@
 // The second parameter is the DSP i2c address, which is defined in the parameter file
 // The third parameter is the sample rate
 // An optional fourth parameter is the pin to physically reset the DSP
-SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 96000.00f, PIN_ADAU_RST);
+SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 48000.00f, PIN_ADAU_RST);
 Frontpanel *frontpanel;
 
 uint16_t vcc_threshold_low;
@@ -34,6 +34,13 @@ bool vcc_good;
 uint16_t vee_threshold_low;
 uint16_t vee_threshold_high;
 bool vee_good;
+
+// Create an instance for each EQ block
+secondOrderEQ eqBand1;
+secondOrderEQ eqBand2;
+secondOrderEQ eqBand3;
+secondOrderEQ eqBand4;
+secondOrderEQ eqBand5;
 
 uint16_t voutForVee(float vee, float vref = 3.3, float R1=10e3, float R2=150e3) {
   return (uint16_t)(4096.0/3.3*(vref*R2/(R1+R2)+vee*R1/(R1+R2)));
@@ -122,6 +129,52 @@ void checkSupplyLevels() {
   }
 }
 
+void testEQ() {
+  Serial.println("Test EQ");
+  eqBand1.boost = 10;
+  eqBand1.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE0_B0_ADDR, eqBand1);
+
+  eqBand2.boost = -10;
+  eqBand2.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE1_B0_ADDR, eqBand2);
+
+  eqBand3.boost = 5;
+  eqBand3.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE2_B0_ADDR, eqBand3);
+
+  eqBand4.boost = -3;
+  eqBand4.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE3_B0_ADDR, eqBand4);
+
+  eqBand5.boost = 7;
+  eqBand5.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE4_B0_ADDR, eqBand5);
+}
+
+void resetEQ() {
+  Serial.println("Reset EQ");
+  eqBand1.boost = 0;
+  eqBand1.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE0_B0_ADDR, eqBand1);
+
+  eqBand2.boost = 0;
+  eqBand2.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE1_B0_ADDR, eqBand2);
+
+  eqBand3.boost = 0;
+  eqBand3.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE2_B0_ADDR, eqBand3);
+
+  eqBand4.boost = 0;
+  eqBand4.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE3_B0_ADDR, eqBand4);
+
+  eqBand5.boost = 0;
+  eqBand5.state = parameters::state::on;
+  dsp.EQsecondOrder(MOD_MIDEQ1_ALG0_STAGE4_B0_ADDR, eqBand5);
+}
+
 void printStatus() {
   uint32_t balance  = dsp.readBack(MOD_BALANCEADC_ALG0_VAL0_ADDR,  MOD_BALANCEADC_ALG0_VAL0_VALUES,  3);
   uint32_t volume  = dsp.readBack(MOD_VOLUMEADC_ALG0_VAL0_ADDR,  MOD_VOLUMEADC_ALG0_VAL0_VALUES,  3);
@@ -193,17 +246,50 @@ void setup() {
   vee_good = false;
 
   __cnt = 0;
+
+  // Initilize EQ band 1
+  eqBand1.filterType = parameters::filterType::peaking;
+  eqBand1.Q = 1.41;
+  eqBand1.freq = 62.5;
+
+  // Initilize EQ band 2
+  eqBand2.filterType = parameters::filterType::peaking;
+  eqBand2.Q = 1.41;
+  eqBand2.freq = 250;
+
+  // Initilize EQ band 3
+  eqBand3.filterType = parameters::filterType::peaking;
+  eqBand3.Q = 1.41;
+  eqBand3.freq = 1000;
+
+  // Initilize EQ band 4
+  eqBand4.filterType = parameters::filterType::peaking;
+  eqBand4.Q = 1.41;
+  eqBand4.freq = 3600;
+
+  // Initilize EQ band 5
+  eqBand5.filterType = parameters::filterType::peaking;
+  eqBand5.Q = 1.41;
+  eqBand5.freq = 12000;
 }
+
+int eq_state = 0;
 
 void loop() {
   uint32_t checksum  = dsp.readBack(MOD_READBACK1_ALG0_VAL0_ADDR,  MOD_READBACK1_ALG0_VAL0_VALUES,  3);
-  //Serial.printf("Readback checksum: %x\n", checksum);
   updateFrontpanel();
   __cnt++;
-  if (__cnt > 10) {
+  if (__cnt > 100) {
     __cnt = 0;
     checkSupplyLevels();
     printStatus();
+    if (!eq_state) {
+      testEQ();
+      eq_state = 1;
+    } else {
+      resetEQ();
+      eq_state = 0;
+    }
+    digitalWrite(PIN_STATUS, !digitalRead(PIN_STATUS));
   }
-  digitalWrite(PIN_STATUS, !digitalRead(PIN_STATUS));
 }

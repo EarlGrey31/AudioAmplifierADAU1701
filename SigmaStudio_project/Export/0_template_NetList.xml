@@ -17,20 +17,20 @@
 <NetList>
     <IC name=" IC 1 " type="DSPSigma100">
         <Schematic>
-            <Algorithm name="ICSigma100In1" friendlyname="170x\140x input " cell="Input1 " location="{X=-21, Y=150} " Growth="10 " GrowthB="0 " FS="96000">
+            <Algorithm name="ICSigma100In1" friendlyname="170x\140x input " cell="Input1 " location="{X=-21, Y=150} " Growth="10 " GrowthB="0 " FS="48000">
                 <Link pin="O_C0_A0_P1_out" dir="out" link="Link15" />
                 <Link pin="O_C0_A0_P2_out" dir="out" link="Link16" />
             </Algorithm>
-            <Algorithm name="DCInpAlg1" friendlyname="dc Input " cell="DC1 " location="{X=11, Y=-49} " Growth="0 " GrowthB="0 " FS="96000">
+            <Algorithm name="DCInpAlg1" friendlyname="dc Input " cell="DC1 " location="{X=11, Y=-49} " Growth="0 " GrowthB="0 " FS="48000">
                 <Link pin="O_C20_A0_P1_out" dir="out" link="Link0" />
             </Algorithm>
-            <Algorithm name="RegReadAlgADCIn1" friendlyname="Auxiliary ADC Input " cell="ADC In1 " location="{X=49, Y=70} " Growth="0 " GrowthB="0 " FS="96000">
+            <Algorithm name="RegReadAlgADCIn1" friendlyname="Auxiliary ADC Input " cell="ADC In1 " location="{X=49, Y=70} " Growth="0 " GrowthB="0 " FS="48000">
                 <Link pin="O_C29_A0_P1_out" dir="out" link="Link30" />
             </Algorithm>
-            <Algorithm name="DCInpAlg2" friendlyname="dc Input " cell="DC2 " location="{X=97, Y=331} " Growth="0 " GrowthB="0 " FS="96000">
+            <Algorithm name="DCInpAlg2" friendlyname="dc Input " cell="DC2 " location="{X=97, Y=331} " Growth="0 " GrowthB="0 " FS="48000">
                 <Link pin="O_C76_A0_P1_out" dir="out" link="Link22" />
             </Algorithm>
-            <Algorithm name="RegReadAlgADCIn2" friendlyname="Auxiliary ADC Input " cell="ADC In1_2 " location="{X=-21, Y=489} " Growth="0 " GrowthB="0 " FS="96000">
+            <Algorithm name="RegReadAlgADCIn2" friendlyname="Auxiliary ADC Input " cell="ADC In1_2 " location="{X=-21, Y=489} " Growth="0 " GrowthB="0 " FS="48000">
                 <Link pin="O_C81_A0_P1_out" dir="out" link="Link21" />
             </Algorithm>
             <Algorithm name="ReadBackAlg1" friendlyname="Data Capture Register Readback " cell="ReadBack1 " location="{X=182, Y=-57} " Growth="0 " GrowthB="0">
@@ -82,92 +82,98 @@
                 <Link pin="I_C210_A0_P1_in" dir="in" link="Link24" />
                 <Link pin="O_C210_A0_P2_out" dir="out" link="Link26" />
             </Algorithm>
-            <Algorithm name="ICSigma100Out2" friendlyname="170x\140x output " cell="Output2 " location="{X=879, Y=312.5} " Growth="0 " GrowthB="0">
-                <Link pin="I_C13_A0_P1_in" dir="in" link="Link27" />
+            <Algorithm name="EQ1940Dual1" friendlyname="2 Channel - Double Precision " cell="Mid EQ1 " location="{X=658, Y=197} " Growth="5 " GrowthB="0">
+                <Link pin="I_C71_A0_P1_in" dir="in" link="Link26" />
+                <Link pin="I_C71_A0_P2_in" dir="in" link="Link27" />
+                <Link pin="O_C71_A0_P3_out" dir="out" link="Link31" />
+                <Link pin="O_C71_A0_P4_out" dir="out" link="Link32" />
             </Algorithm>
-            <Algorithm name="MonoRunAvgDetectAlg2" friendlyname="Average Envelope " cell="AvgEnv2 " location="{X=700, Y=92} " Growth="0 " GrowthB="0">
-                <Link pin="I_C88_A0_P1_in" dir="in" link="Link27" />
-                <Link pin="O_C88_A0_P2_out" dir="out" link="Link2" />
+            <Algorithm name="ICSigma100Out1" friendlyname="170x\140x output " cell="Output1 " location="{X=1981, Y=249.5} " Growth="0 " GrowthB="0">
+                <Link pin="I_C11_A0_P1_in" dir="in" link="Link31" />
             </Algorithm>
-            <Algorithm name="Gain1940AlgNS2" friendlyname="Gain (no slew) " cell="Gain1_2 " location="{X=680, Y=503} " Growth="0 " GrowthB="0">
-                <Link pin="I_C106_A0_P1_in" dir="in" link="Link27" />
-                <Link pin="O_C106_A0_P2_out" dir="out" link="Link4" />
+            <Algorithm name="ICSigma100Out2" friendlyname="170x\140x output " cell="Output2 " location="{X=1982, Y=295.5} " Growth="0 " GrowthB="0">
+                <Link pin="I_C13_A0_P1_in" dir="in" link="Link32" />
             </Algorithm>
-            <Algorithm name="ICSigma100Out1" friendlyname="170x\140x output " cell="Output1 " location="{X=878, Y=255.5} " Growth="0 " GrowthB="0">
-                <Link pin="I_C11_A0_P1_in" dir="in" link="Link26" />
-            </Algorithm>
-            <Algorithm name="MonoRunAvgDetectAlg1" friendlyname="Average Envelope " cell="AvgEnv1 " location="{X=704, Y=-56} " Growth="0 " GrowthB="0">
-                <Link pin="I_C85_A0_P1_in" dir="in" link="Link26" />
+            <Algorithm name="MonoRunAvgDetectAlg1" friendlyname="Average Envelope " cell="AvgEnv1 " location="{X=1448, Y=-99} " Growth="0 " GrowthB="0">
+                <Link pin="I_C85_A0_P1_in" dir="in" link="Link31" />
                 <Link pin="O_C85_A0_P2_out" dir="out" link="Link1" />
             </Algorithm>
-            <Algorithm name="ReadBackAlg3" friendlyname="Data Capture Register Readback " cell="CH1_RMS " location="{X=856, Y=105} " Growth="0 " GrowthB="0">
-                <Link pin="I_C59_A0_P1_in" dir="in" link="Link2" />
+            <Algorithm name="MonoRunAvgDetectAlg2" friendlyname="Average Envelope " cell="AvgEnv2 " location="{X=1450, Y=33} " Growth="0 " GrowthB="0">
+                <Link pin="I_C88_A0_P1_in" dir="in" link="Link32" />
+                <Link pin="O_C88_A0_P2_out" dir="out" link="Link2" />
             </Algorithm>
-            <Algorithm name="Gain1940AlgNS1" friendlyname="Gain (no slew) " cell="Gain1 " location="{X=681, Y=421} " Growth="0 " GrowthB="0">
-                <Link pin="I_C103_A0_P1_in" dir="in" link="Link26" />
+            <Algorithm name="Gain1940AlgNS1" friendlyname="Gain (no slew) " cell="Gain1 " location="{X=1325, Y=385} " Growth="0 " GrowthB="0">
+                <Link pin="I_C103_A0_P1_in" dir="in" link="Link31" />
                 <Link pin="O_C103_A0_P2_out" dir="out" link="Link3" />
             </Algorithm>
-            <Algorithm name="AdderAlg1" friendlyname="Signal Mix " cell="Add1 " location="{X=819, Y=476} " Growth="2 " GrowthB="0">
+            <Algorithm name="Gain1940AlgNS2" friendlyname="Gain (no slew) " cell="Gain1_2 " location="{X=1324, Y=467} " Growth="0 " GrowthB="0">
+                <Link pin="I_C106_A0_P1_in" dir="in" link="Link32" />
+                <Link pin="O_C106_A0_P2_out" dir="out" link="Link4" />
+            </Algorithm>
+            <Algorithm name="ReadBackAlg2" friendlyname="Data Capture Register Readback " cell="CH0_RMS " location="{X=1596, Y=-85} " Growth="0 " GrowthB="0">
+                <Link pin="I_C56_A0_P1_in" dir="in" link="Link1" />
+            </Algorithm>
+            <Algorithm name="ReadBackAlg3" friendlyname="Data Capture Register Readback " cell="CH1_RMS " location="{X=1606, Y=46} " Growth="0 " GrowthB="0">
+                <Link pin="I_C59_A0_P1_in" dir="in" link="Link2" />
+            </Algorithm>
+            <Algorithm name="AdderAlg1" friendlyname="Signal Mix " cell="Add1 " location="{X=1463, Y=440} " Growth="2 " GrowthB="0">
                 <Link pin="I_C113_A0_P2_in" dir="in" link="Link3" />
                 <Link pin="I_C113_A0_P3_in" dir="in" link="Link4" />
                 <Link pin="O_C113_A0_P1_out" dir="out" link="Link28" />
             </Algorithm>
-            <Algorithm name="ReadBackAlg2" friendlyname="Data Capture Register Readback " cell="CH0_RMS " location="{X=852, Y=-42} " Growth="0 " GrowthB="0">
-                <Link pin="I_C56_A0_P1_in" dir="in" link="Link1" />
-            </Algorithm>
-            <Algorithm name="EQ1940SingleS1" friendlyname="1 Channel - Single Precision " cell="Gen Filter2 " location="{X=1019, Y=453} " Growth="1 " GrowthB="0">
+            <Algorithm name="EQ1940SingleS1" friendlyname="1 Channel - Single Precision " cell="Gen Filter2 " location="{X=1663, Y=417} " Growth="1 " GrowthB="0">
                 <Link pin="I_C126_A0_P1_in" dir="in" link="Link28" />
                 <Link pin="O_C126_A0_P2_out" dir="out" link="Link6" />
             </Algorithm>
-            <Algorithm name="EQ1940SingleS2" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_2 " location="{X=1021, Y=561} " Growth="1 " GrowthB="0">
+            <Algorithm name="EQ1940SingleS2" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_2 " location="{X=1665, Y=525} " Growth="1 " GrowthB="0">
                 <Link pin="I_C129_A0_P1_in" dir="in" link="Link28" />
                 <Link pin="O_C129_A0_P2_out" dir="out" link="Link11" />
             </Algorithm>
-            <Algorithm name="EQ1940SingleS3" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_3 " location="{X=1026, Y=675} " Growth="1 " GrowthB="0">
+            <Algorithm name="EQ1940SingleS3" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_3 " location="{X=1670, Y=639} " Growth="1 " GrowthB="0">
                 <Link pin="I_C132_A0_P1_in" dir="in" link="Link28" />
                 <Link pin="O_C132_A0_P2_out" dir="out" link="Link12" />
             </Algorithm>
-            <Algorithm name="EQ1940SingleS4" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_4 " location="{X=1025, Y=793} " Growth="1 " GrowthB="0">
+            <Algorithm name="EQ1940SingleS4" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_4 " location="{X=1669, Y=757} " Growth="1 " GrowthB="0">
                 <Link pin="I_C135_A0_P1_in" dir="in" link="Link28" />
                 <Link pin="O_C135_A0_P2_out" dir="out" link="Link13" />
             </Algorithm>
-            <Algorithm name="EQ1940SingleS5" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_5 " location="{X=1020, Y=913.1914} " Growth="1 " GrowthB="0">
+            <Algorithm name="EQ1940SingleS5" friendlyname="1 Channel - Single Precision " cell="Gen Filter2_5 " location="{X=1664, Y=877.1914} " Growth="1 " GrowthB="0">
                 <Link pin="I_C138_A0_P1_in" dir="in" link="Link28" />
                 <Link pin="O_C138_A0_P2_out" dir="out" link="Link14" />
             </Algorithm>
-            <Algorithm name="MonoRunAvgDetectAlg3" friendlyname="Average Envelope " cell="AvgEnv2_2 " location="{X=1157, Y=434} " Growth="0 " GrowthB="0">
+            <Algorithm name="MonoRunAvgDetectAlg3" friendlyname="Average Envelope " cell="AvgEnv2_2 " location="{X=1801, Y=398} " Growth="0 " GrowthB="0">
                 <Link pin="I_C148_A0_P1_in" dir="in" link="Link6" />
                 <Link pin="O_C148_A0_P2_out" dir="out" link="Link5" />
             </Algorithm>
-            <Algorithm name="MonoRunAvgDetectAlg4" friendlyname="Average Envelope " cell="AvgEnv2_3 " location="{X=1165, Y=545} " Growth="0 " GrowthB="0">
+            <Algorithm name="MonoRunAvgDetectAlg4" friendlyname="Average Envelope " cell="AvgEnv2_3 " location="{X=1809, Y=509} " Growth="0 " GrowthB="0">
                 <Link pin="I_C170_A0_P1_in" dir="in" link="Link11" />
                 <Link pin="O_C170_A0_P2_out" dir="out" link="Link7" />
             </Algorithm>
-            <Algorithm name="MonoRunAvgDetectAlg5" friendlyname="Average Envelope " cell="AvgEnv2_4 " location="{X=1167, Y=659} " Growth="0 " GrowthB="0">
+            <Algorithm name="MonoRunAvgDetectAlg5" friendlyname="Average Envelope " cell="AvgEnv2_4 " location="{X=1811, Y=623} " Growth="0 " GrowthB="0">
                 <Link pin="I_C175_A0_P1_in" dir="in" link="Link12" />
                 <Link pin="O_C175_A0_P2_out" dir="out" link="Link8" />
             </Algorithm>
-            <Algorithm name="MonoRunAvgDetectAlg6" friendlyname="Average Envelope " cell="AvgEnv2_5 " location="{X=1163, Y=777} " Growth="0 " GrowthB="0">
+            <Algorithm name="MonoRunAvgDetectAlg6" friendlyname="Average Envelope " cell="AvgEnv2_5 " location="{X=1807, Y=741} " Growth="0 " GrowthB="0">
                 <Link pin="I_C186_A0_P1_in" dir="in" link="Link13" />
                 <Link pin="O_C186_A0_P2_out" dir="out" link="Link9" />
             </Algorithm>
-            <Algorithm name="MonoRunAvgDetectAlg7" friendlyname="Average Envelope " cell="AvgEnv2_6 " location="{X=1164, Y=897} " Growth="0 " GrowthB="0">
+            <Algorithm name="MonoRunAvgDetectAlg7" friendlyname="Average Envelope " cell="AvgEnv2_6 " location="{X=1808, Y=861} " Growth="0 " GrowthB="0">
                 <Link pin="I_C194_A0_P1_in" dir="in" link="Link14" />
                 <Link pin="O_C194_A0_P2_out" dir="out" link="Link10" />
             </Algorithm>
-            <Algorithm name="ReadBackAlg4" friendlyname="Data Capture Register Readback " cell="BAND0_RMS " location="{X=1313, Y=447} " Growth="0 " GrowthB="0">
+            <Algorithm name="ReadBackAlg4" friendlyname="Data Capture Register Readback " cell="BAND0_RMS " location="{X=1957, Y=411} " Growth="0 " GrowthB="0">
                 <Link pin="I_C145_A0_P1_in" dir="in" link="Link5" />
             </Algorithm>
-            <Algorithm name="ReadBackAlg5" friendlyname="Data Capture Register Readback " cell="BAND1_RMS " location="{X=1321, Y=558} " Growth="0 " GrowthB="0">
+            <Algorithm name="ReadBackAlg5" friendlyname="Data Capture Register Readback " cell="BAND1_RMS " location="{X=1965, Y=522} " Growth="0 " GrowthB="0">
                 <Link pin="I_C167_A0_P1_in" dir="in" link="Link7" />
             </Algorithm>
-            <Algorithm name="ReadBackAlg6" friendlyname="Data Capture Register Readback " cell="BAND2_RMS " location="{X=1323, Y=672} " Growth="0 " GrowthB="0">
+            <Algorithm name="ReadBackAlg6" friendlyname="Data Capture Register Readback " cell="BAND2_RMS " location="{X=1967, Y=636} " Growth="0 " GrowthB="0">
                 <Link pin="I_C178_A0_P1_in" dir="in" link="Link8" />
             </Algorithm>
-            <Algorithm name="ReadBackAlg7" friendlyname="Data Capture Register Readback " cell="BAND3_RMS " location="{X=1319, Y=790} " Growth="0 " GrowthB="0">
+            <Algorithm name="ReadBackAlg7" friendlyname="Data Capture Register Readback " cell="BAND3_RMS " location="{X=1963, Y=754} " Growth="0 " GrowthB="0">
                 <Link pin="I_C183_A0_P1_in" dir="in" link="Link9" />
             </Algorithm>
-            <Algorithm name="ReadBackAlg8" friendlyname="Data Capture Register Readback " cell="BAND4_RMS " location="{X=1320, Y=910} " Growth="0 " GrowthB="0">
+            <Algorithm name="ReadBackAlg8" friendlyname="Data Capture Register Readback " cell="BAND4_RMS " location="{X=1964, Y=874} " Growth="0 " GrowthB="0">
                 <Link pin="I_C191_A0_P1_in" dir="in" link="Link10" />
             </Algorithm>
         </Schematic>

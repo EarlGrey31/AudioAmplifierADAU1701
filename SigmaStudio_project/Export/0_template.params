@@ -18,7 +18,7 @@ Parameter Data :
 Cell Name         = DC1
 Parameter Name    = DCInpAlg1
 Parameter Address = 0
-Parameter Value   = -4.16515958309174
+Parameter Value   = -34939891
 Parameter Data :
 0x0D, 0xEA, 0xDC, 0x0D, 
 
@@ -27,45 +27,45 @@ Parameter Data :
 Cell Name         = Gen Filter1
 Parameter Name    = EQ1940DualS10B1
 Parameter Address = 2
-Parameter Value   = 0.998867273330688
+Parameter Value   = 0.997736215591431
 Parameter Data :
-0x00 ,	0x7F ,	0xDA ,	0xE2 ,	
+0x00 ,	0x7F ,	0xB5 ,	0xD2 ,	
 
 
 
 Cell Name         = Gen Filter1
 Parameter Name    = EQ1940DualS11B1
 Parameter Address = 3
-Parameter Value   = -1.99773442745209
+Parameter Value   = -1.99547231197357
 Parameter Data :
-0x0F ,	0x00 ,	0x4A ,	0x3D ,	
+0x0F ,	0x00 ,	0x94 ,	0x5D ,	
 
 
 
 Cell Name         = Gen Filter1
 Parameter Name    = EQ1940DualS12B1
 Parameter Address = 4
-Parameter Value   = 0.998867273330688
+Parameter Value   = 0.997736215591431
 Parameter Data :
-0x00 ,	0x7F ,	0xDA ,	0xE2 ,	
+0x00 ,	0x7F ,	0xB5 ,	0xD2 ,	
 
 
 
 Cell Name         = Gen Filter1
 Parameter Name    = EQ1940DualS11A1
 Parameter Address = 5
-Parameter Value   = 1.99773359298706
+Parameter Value   = 1.99546897411346
 Parameter Data :
-0x00 ,	0xFF ,	0xB5 ,	0xBC ,	
+0x00 ,	0xFF ,	0x6B ,	0x87 ,	
 
 
 
 Cell Name         = Gen Filter1
 Parameter Name    = EQ1940DualS12A1
 Parameter Address = 6
-Parameter Value   = -0.997735261917114
+Parameter Value   = -0.995475769042969
 Parameter Data :
-0x0F ,	0x80 ,	0x4A ,	0x36 ,	
+0x0F ,	0x80 ,	0x94 ,	0x40 ,	
 
 
 
@@ -74,7 +74,7 @@ Parameter Name    = ReadBackAlg2
 Parameter Address = 2074
 Readback Address = 0
 Parameter Data :
-0x02 ,	0x56 ,	
+0x03 ,	0xCA ,	
 
 
 Cell Name         = CH0_RMS
@@ -91,7 +91,7 @@ Parameter Name    = ReadBackAlg3
 Parameter Address = 2074
 Readback Address = 0
 Parameter Data :
-0x02 ,	0x2E ,	
+0x03 ,	0xD6 ,	
 
 
 Cell Name         = CH1_RMS
@@ -105,16 +105,16 @@ Parameter Data :
 
 Cell Name         = AvgEnv1
 Parameter Name    = MonoRunAvgDetectAlg1RMS
-Parameter Address = 17
-Parameter Value   = 0.000287890434265137
+Parameter Address = 38
+Parameter Value   = 0.000575780868530273
 Parameter Data :
-0x00 ,	0x00 ,	0x09 ,	0x6F ,	
+0x00 ,	0x00 ,	0x12 ,	0xDE ,	
 
 
 
 Cell Name         = AvgEnv1
 Parameter Name    = MonoRunAvgDetectAlg1hold
-Parameter Address = 18
+Parameter Address = 39
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -123,25 +123,25 @@ Parameter Data :
 
 Cell Name         = AvgEnv1
 Parameter Name    = MonoRunAvgDetectAlg1decay
-Parameter Address = 19
-Parameter Value   = 1.07288360595703E-06
+Parameter Address = 40
+Parameter Value   = 2.14576721191406E-06
 Parameter Data :
-0x00 ,	0x00 ,	0x00 ,	0x09 ,	
+0x00 ,	0x00 ,	0x00 ,	0x12 ,	
 
 
 
 Cell Name         = AvgEnv2
 Parameter Name    = MonoRunAvgDetectAlg2RMS
-Parameter Address = 13
-Parameter Value   = 0.000287890434265137
+Parameter Address = 41
+Parameter Value   = 0.000575780868530273
 Parameter Data :
-0x00 ,	0x00 ,	0x09 ,	0x6F ,	
+0x00 ,	0x00 ,	0x12 ,	0xDE ,	
 
 
 
 Cell Name         = AvgEnv2
 Parameter Name    = MonoRunAvgDetectAlg2hold
-Parameter Address = 14
+Parameter Address = 42
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -150,16 +150,16 @@ Parameter Data :
 
 Cell Name         = AvgEnv2
 Parameter Name    = MonoRunAvgDetectAlg2decay
-Parameter Address = 15
-Parameter Value   = 1.07288360595703E-06
+Parameter Address = 43
+Parameter Value   = 2.14576721191406E-06
 Parameter Data :
-0x00 ,	0x00 ,	0x00 ,	0x09 ,	
+0x00 ,	0x00 ,	0x00 ,	0x12 ,	
 
 
 
 Cell Name         = Gain1
 Parameter Name    = Gain1940AlgNS1
-Parameter Address = 20
+Parameter Address = 44
 Parameter Value   = 0.5
 Parameter Data :
 0x00, 0x40, 0x00, 0x00, 
@@ -168,7 +168,7 @@ Parameter Data :
 
 Cell Name         = Gain1_2
 Parameter Name    = Gain1940AlgNS2
-Parameter Address = 16
+Parameter Address = 45
 Parameter Value   = 0.5
 Parameter Data :
 0x00, 0x40, 0x00, 0x00, 
@@ -177,16 +177,16 @@ Parameter Data :
 
 Cell Name         = Gen Filter2
 Parameter Name    = EQ1940SingleS10B1
-Parameter Address = 21
-Parameter Value   = 0.0020751953125
+Parameter Address = 46
+Parameter Value   = 0.00414168834686279
 Parameter Data :
-0x00 ,	0x00 ,	0x44 ,	0x00 ,	
+0x00 ,	0x00 ,	0x87 ,	0xB7 ,	
 
 
 
 Cell Name         = Gen Filter2
 Parameter Name    = EQ1940SingleS11B1
-Parameter Address = 22
+Parameter Address = 47
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -195,43 +195,43 @@ Parameter Data :
 
 Cell Name         = Gen Filter2
 Parameter Name    = EQ1940SingleS12B1
-Parameter Address = 23
-Parameter Value   = -0.0020751953125
+Parameter Address = 48
+Parameter Value   = -0.00414168834686279
 Parameter Data :
-0x0F ,	0xFF ,	0xBC ,	0x00 ,	
+0x0F ,	0xFF ,	0x78 ,	0x49 ,	
 
 
 
 Cell Name         = Gen Filter2
 Parameter Name    = EQ1940SingleS11A1
-Parameter Address = 24
-Parameter Value   = 1.99583303928375
+Parameter Address = 49
+Parameter Value   = 1.99164986610413
 Parameter Data :
-0x00 ,	0xFF ,	0x77 ,	0x75 ,	
+0x00 ,	0xFE ,	0xEE ,	0x62 ,	
 
 
 
 Cell Name         = Gen Filter2
 Parameter Name    = EQ1940SingleS12A1
-Parameter Address = 25
-Parameter Value   = -0.99584972858429
+Parameter Address = 50
+Parameter Value   = -0.991716623306274
 Parameter Data :
-0x0F ,	0x80 ,	0x87 ,	0xFF ,	
+0x0F ,	0x81 ,	0x0F ,	0x6E ,	
 
 
 
 Cell Name         = Gen Filter2_2
 Parameter Name    = EQ1940SingleS20B1
-Parameter Address = 26
-Parameter Value   = 0.00824928283691406
+Parameter Address = 51
+Parameter Value   = 0.0163637399673462
 Parameter Data :
-0x00 ,	0x01 ,	0x0E ,	0x50 ,	
+0x00 ,	0x02 ,	0x18 ,	0x35 ,	
 
 
 
 Cell Name         = Gen Filter2_2
 Parameter Name    = EQ1940SingleS21B1
-Parameter Address = 27
+Parameter Address = 52
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -240,43 +240,43 @@ Parameter Data :
 
 Cell Name         = Gen Filter2_2
 Parameter Name    = EQ1940SingleS22B1
-Parameter Address = 28
-Parameter Value   = -0.00824928283691406
+Parameter Address = 53
+Parameter Value   = -0.0163637399673462
 Parameter Data :
-0x0F ,	0xFE ,	0xF1 ,	0xB0 ,	
+0x0F ,	0xFD ,	0xE7 ,	0xCB ,	
 
 
 
 Cell Name         = Gen Filter2_2
 Parameter Name    = EQ1940SingleS21A1
-Parameter Address = 29
-Parameter Value   = 1.98323595523834
+Parameter Address = 54
+Parameter Value   = 1.96621918678284
 Parameter Data :
-0x00 ,	0xFD ,	0xDA ,	0xAD ,	
+0x00 ,	0xFB ,	0xAD ,	0x12 ,	
 
 
 
 Cell Name         = Gen Filter2_2
 Parameter Name    = EQ1940SingleS22A1
-Parameter Address = 30
-Parameter Value   = -0.983501434326172
+Parameter Address = 55
+Parameter Value   = -0.967272520065308
 Parameter Data :
-0x0F ,	0x82 ,	0x1C ,	0xA0 ,	
+0x0F ,	0x84 ,	0x30 ,	0x6A ,	
 
 
 
 Cell Name         = Gen Filter2_3
 Parameter Name    = EQ1940SingleS30B1
-Parameter Address = 31
-Parameter Value   = 0.032201886177063
+Parameter Address = 56
+Parameter Value   = 0.0624043941497803
 Parameter Data :
-0x00 ,	0x04 ,	0x1F ,	0x31 ,	
+0x00 ,	0x07 ,	0xFC ,	0xDE ,	
 
 
 
 Cell Name         = Gen Filter2_3
 Parameter Name    = EQ1940SingleS31B1
-Parameter Address = 32
+Parameter Address = 57
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -285,43 +285,43 @@ Parameter Data :
 
 Cell Name         = Gen Filter2_3
 Parameter Name    = EQ1940SingleS32B1
-Parameter Address = 33
-Parameter Value   = -0.032201886177063
+Parameter Address = 58
+Parameter Value   = -0.0624043941497803
 Parameter Data :
-0x0F ,	0xFB ,	0xE0 ,	0xCF ,	
+0x0F ,	0xF8 ,	0x03 ,	0x22 ,	
 
 
 
 Cell Name         = Gen Filter2_3
 Parameter Name    = EQ1940SingleS31A1
-Parameter Address = 34
-Parameter Value   = 1.93145191669464
+Parameter Address = 59
+Parameter Value   = 1.85914862155914
 Parameter Data :
-0x00 ,	0xF7 ,	0x39 ,	0xD1 ,	
+0x00 ,	0xED ,	0xF8 ,	0x95 ,	
 
 
 
 Cell Name         = Gen Filter2_3
 Parameter Name    = EQ1940SingleS32A1
-Parameter Address = 35
-Parameter Value   = -0.935596227645874
+Parameter Address = 60
+Parameter Value   = -0.87519109249115
 Parameter Data :
-0x0F ,	0x88 ,	0x3E ,	0x62 ,	
+0x0F ,	0x8F ,	0xF9 ,	0xBD ,	
 
 
 
 Cell Name         = Gen Filter2_4
 Parameter Name    = EQ1940SingleS40B1
-Parameter Address = 36
-Parameter Value   = 0.107035398483276
+Parameter Address = 61
+Parameter Value   = 0.193731904029846
 Parameter Data :
-0x00 ,	0x0D ,	0xB3 ,	0x56 ,	
+0x00 ,	0x18 ,	0xCC ,	0x35 ,	
 
 
 
 Cell Name         = Gen Filter2_4
 Parameter Name    = EQ1940SingleS41B1
-Parameter Address = 37
+Parameter Address = 62
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -330,43 +330,43 @@ Parameter Data :
 
 Cell Name         = Gen Filter2_4
 Parameter Name    = EQ1940SingleS42B1
-Parameter Address = 38
-Parameter Value   = -0.107035398483276
+Parameter Address = 63
+Parameter Value   = -0.193731904029846
 Parameter Data :
-0x0F ,	0xF2 ,	0x4C ,	0xAA ,	
+0x0F ,	0xE7 ,	0x33 ,	0xCB ,	
 
 
 
 Cell Name         = Gen Filter2_4
 Parameter Name    = EQ1940SingleS41A1
-Parameter Address = 39
-Parameter Value   = 1.73658382892609
+Parameter Address = 64
+Parameter Value   = 1.43678033351898
 Parameter Data :
-0x00 ,	0xDE ,	0x48 ,	0x61 ,	
+0x00 ,	0xB7 ,	0xE8 ,	0x6B ,	
 
 
 
 Cell Name         = Gen Filter2_4
 Parameter Name    = EQ1940SingleS42A1
-Parameter Address = 40
-Parameter Value   = -0.785929203033447
+Parameter Address = 65
+Parameter Value   = -0.612536191940308
 Parameter Data :
-0x0F ,	0x9B ,	0x66 ,	0xAC ,	
+0x0F ,	0xB1 ,	0x98 ,	0x6A ,	
 
 
 
 Cell Name         = Gen Filter2_5
 Parameter Name    = EQ1940SingleS50B1
-Parameter Address = 41
-Parameter Value   = 0.287202954292297
+Parameter Address = 66
+Parameter Value   = 0.458062291145325
 Parameter Data :
-0x00 ,	0x24 ,	0xC3 ,	0x11 ,	
+0x00 ,	0x3A ,	0xA1 ,	0xC9 ,	
 
 
 
 Cell Name         = Gen Filter2_5
 Parameter Name    = EQ1940SingleS51B1
-Parameter Address = 42
+Parameter Address = 67
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -375,28 +375,28 @@ Parameter Data :
 
 Cell Name         = Gen Filter2_5
 Parameter Name    = EQ1940SingleS52B1
-Parameter Address = 43
-Parameter Value   = -0.287202954292297
+Parameter Address = 68
+Parameter Value   = -0.458062291145325
 Parameter Data :
-0x0F ,	0xDB ,	0x3C ,	0xEF ,	
+0x0F ,	0xC5 ,	0x5E ,	0x37 ,	
 
 
 
 Cell Name         = Gen Filter2_5
 Parameter Name    = EQ1940SingleS51A1
-Parameter Address = 44
-Parameter Value   = 1.00804722309113
+Parameter Address = 69
+Parameter Value   = 0
 Parameter Data :
-0x00 ,	0x81 ,	0x07 ,	0xB1 ,	
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
 
 
 
 Cell Name         = Gen Filter2_5
 Parameter Name    = EQ1940SingleS52A1
-Parameter Address = 45
-Parameter Value   = -0.425594091415405
+Parameter Address = 70
+Parameter Value   = -0.0838754177093506
 Parameter Data :
-0x0F ,	0xC9 ,	0x86 ,	0x22 ,	
+0x0F ,	0xF5 ,	0x43 ,	0x92 ,	
 
 
 
@@ -405,7 +405,7 @@ Parameter Name    = ReadBackAlg4
 Parameter Address = 2074
 Readback Address = 0
 Parameter Data :
-0x04 ,	0xF6 ,	
+0x06 ,	0x86 ,	
 
 
 Cell Name         = BAND0_RMS
@@ -419,16 +419,16 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_2
 Parameter Name    = MonoRunAvgDetectAlg3RMS
-Parameter Address = 46
-Parameter Value   = 0.000287890434265137
+Parameter Address = 71
+Parameter Value   = 0.000575780868530273
 Parameter Data :
-0x00 ,	0x00 ,	0x09 ,	0x6F ,	
+0x00 ,	0x00 ,	0x12 ,	0xDE ,	
 
 
 
 Cell Name         = AvgEnv2_2
 Parameter Name    = MonoRunAvgDetectAlg3hold
-Parameter Address = 47
+Parameter Address = 72
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -437,10 +437,10 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_2
 Parameter Name    = MonoRunAvgDetectAlg3decay
-Parameter Address = 48
-Parameter Value   = 1.07288360595703E-06
+Parameter Address = 73
+Parameter Value   = 2.14576721191406E-06
 Parameter Data :
-0x00 ,	0x00 ,	0x00 ,	0x09 ,	
+0x00 ,	0x00 ,	0x00 ,	0x12 ,	
 
 
 
@@ -449,7 +449,7 @@ Parameter Name    = ReadBackAlg5
 Parameter Address = 2074
 Readback Address = 0
 Parameter Data :
-0x05 ,	0x02 ,	
+0x06 ,	0x92 ,	
 
 
 Cell Name         = BAND1_RMS
@@ -463,16 +463,16 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_3
 Parameter Name    = MonoRunAvgDetectAlg4RMS
-Parameter Address = 49
-Parameter Value   = 0.000287890434265137
+Parameter Address = 74
+Parameter Value   = 0.000575780868530273
 Parameter Data :
-0x00 ,	0x00 ,	0x09 ,	0x6F ,	
+0x00 ,	0x00 ,	0x12 ,	0xDE ,	
 
 
 
 Cell Name         = AvgEnv2_3
 Parameter Name    = MonoRunAvgDetectAlg4hold
-Parameter Address = 50
+Parameter Address = 75
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -481,25 +481,25 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_3
 Parameter Name    = MonoRunAvgDetectAlg4decay
-Parameter Address = 51
-Parameter Value   = 1.07288360595703E-06
+Parameter Address = 76
+Parameter Value   = 2.14576721191406E-06
 Parameter Data :
-0x00 ,	0x00 ,	0x00 ,	0x09 ,	
+0x00 ,	0x00 ,	0x00 ,	0x12 ,	
 
 
 
 Cell Name         = AvgEnv2_4
 Parameter Name    = MonoRunAvgDetectAlg5RMS
-Parameter Address = 52
-Parameter Value   = 0.000287890434265137
+Parameter Address = 77
+Parameter Value   = 0.000575780868530273
 Parameter Data :
-0x00 ,	0x00 ,	0x09 ,	0x6F ,	
+0x00 ,	0x00 ,	0x12 ,	0xDE ,	
 
 
 
 Cell Name         = AvgEnv2_4
 Parameter Name    = MonoRunAvgDetectAlg5hold
-Parameter Address = 53
+Parameter Address = 78
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -508,10 +508,10 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_4
 Parameter Name    = MonoRunAvgDetectAlg5decay
-Parameter Address = 54
-Parameter Value   = 1.07288360595703E-06
+Parameter Address = 79
+Parameter Value   = 2.14576721191406E-06
 Parameter Data :
-0x00 ,	0x00 ,	0x00 ,	0x09 ,	
+0x00 ,	0x00 ,	0x00 ,	0x12 ,	
 
 
 
@@ -520,7 +520,7 @@ Parameter Name    = ReadBackAlg6
 Parameter Address = 2074
 Readback Address = 0
 Parameter Data :
-0x05 ,	0x0E ,	
+0x06 ,	0x9E ,	
 
 
 Cell Name         = BAND2_RMS
@@ -537,7 +537,7 @@ Parameter Name    = ReadBackAlg7
 Parameter Address = 2074
 Readback Address = 0
 Parameter Data :
-0x05 ,	0x1A ,	
+0x06 ,	0xAA ,	
 
 
 Cell Name         = BAND3_RMS
@@ -551,16 +551,16 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_5
 Parameter Name    = MonoRunAvgDetectAlg6RMS
-Parameter Address = 55
-Parameter Value   = 0.000287890434265137
+Parameter Address = 80
+Parameter Value   = 0.000575780868530273
 Parameter Data :
-0x00 ,	0x00 ,	0x09 ,	0x6F ,	
+0x00 ,	0x00 ,	0x12 ,	0xDE ,	
 
 
 
 Cell Name         = AvgEnv2_5
 Parameter Name    = MonoRunAvgDetectAlg6hold
-Parameter Address = 56
+Parameter Address = 81
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -569,10 +569,10 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_5
 Parameter Name    = MonoRunAvgDetectAlg6decay
-Parameter Address = 57
-Parameter Value   = 1.07288360595703E-06
+Parameter Address = 82
+Parameter Value   = 2.14576721191406E-06
 Parameter Data :
-0x00 ,	0x00 ,	0x00 ,	0x09 ,	
+0x00 ,	0x00 ,	0x00 ,	0x12 ,	
 
 
 
@@ -581,7 +581,7 @@ Parameter Name    = ReadBackAlg8
 Parameter Address = 2074
 Readback Address = 0
 Parameter Data :
-0x05 ,	0x26 ,	
+0x06 ,	0xB6 ,	
 
 
 Cell Name         = BAND4_RMS
@@ -595,16 +595,16 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_6
 Parameter Name    = MonoRunAvgDetectAlg7RMS
-Parameter Address = 58
-Parameter Value   = 0.000287890434265137
+Parameter Address = 83
+Parameter Value   = 0.000575780868530273
 Parameter Data :
-0x00 ,	0x00 ,	0x09 ,	0x6F ,	
+0x00 ,	0x00 ,	0x12 ,	0xDE ,	
 
 
 
 Cell Name         = AvgEnv2_6
 Parameter Name    = MonoRunAvgDetectAlg7hold
-Parameter Address = 59
+Parameter Address = 84
 Parameter Value   = 0
 Parameter Data :
 0x00 ,	0x00 ,	0x00 ,	0x00 ,	
@@ -613,10 +613,10 @@ Parameter Data :
 
 Cell Name         = AvgEnv2_6
 Parameter Name    = MonoRunAvgDetectAlg7decay
-Parameter Address = 60
-Parameter Value   = 1.07288360595703E-06
+Parameter Address = 85
+Parameter Value   = 2.14576721191406E-06
 Parameter Data :
-0x00 ,	0x00 ,	0x00 ,	0x09 ,	
+0x00 ,	0x00 ,	0x00 ,	0x12 ,	
 
 
 
@@ -641,9 +641,9 @@ Parameter Data :
 Cell Name         = Gen 1st Order1
 Parameter Name    = FistOrderSingle101
 Parameter Address = 7
-Parameter Value   = 0.000195026397705078
+Parameter Value   = 0.000389933586120605
 Parameter Data :
-0x00 ,	0x00 ,	0x06 ,	0x64 ,	
+0x00 ,	0x00 ,	0x0C ,	0xC7 ,	
 
 
 
@@ -659,9 +659,9 @@ Parameter Data :
 Cell Name         = Gen 1st Order1
 Parameter Name    = FistOrderSingle121
 Parameter Address = 9
-Parameter Value   = 0.999804973602295
+Parameter Value   = 0.999610066413879
 Parameter Data :
-0x00 ,	0x7F ,	0xF9 ,	0x9C ,	
+0x00 ,	0x7F ,	0xF3 ,	0x39 ,	
 
 
 
@@ -717,94 +717,319 @@ Parameter Data :
 
 
 
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual10B1
+Parameter Address = 13
+Parameter Value   = 1
+Parameter Data :
+0x00 ,	0x80 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11B1
+Parameter Address = 14
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12B1
+Parameter Address = 15
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11A1
+Parameter Address = 16
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12A1
+Parameter Address = 17
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual10B2
+Parameter Address = 18
+Parameter Value   = 1
+Parameter Data :
+0x00 ,	0x80 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11B2
+Parameter Address = 19
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12B2
+Parameter Address = 20
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11A2
+Parameter Address = 21
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12A2
+Parameter Address = 22
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual10B3
+Parameter Address = 23
+Parameter Value   = 1
+Parameter Data :
+0x00 ,	0x80 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11B3
+Parameter Address = 24
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12B3
+Parameter Address = 25
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11A3
+Parameter Address = 26
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12A3
+Parameter Address = 27
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual10B4
+Parameter Address = 28
+Parameter Value   = 1
+Parameter Data :
+0x00 ,	0x80 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11B4
+Parameter Address = 29
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12B4
+Parameter Address = 30
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11A4
+Parameter Address = 31
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12A4
+Parameter Address = 32
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual10B5
+Parameter Address = 33
+Parameter Value   = 1
+Parameter Data :
+0x00 ,	0x80 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11B5
+Parameter Address = 34
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12B5
+Parameter Address = 35
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual11A5
+Parameter Address = 36
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
+Cell Name         = Mid EQ1
+Parameter Name    = EQ1940Dual12A5
+Parameter Address = 37
+Parameter Value   = 0
+Parameter Data :
+0x00 ,	0x00 ,	0x00 ,	0x00 ,	
+
+
+
 Parameter data for: IC 1 (Hexadecimal format starting at parameter address 0)
 See also 0_template.hex file
 0x0D , 	0xEA , 	0xDC , 	0x0D , 	
 0x00 , 	0x80 , 	0x00 , 	0x00 , 	
-0x00 , 	0x7F , 	0xDA , 	0xE2 , 	
-0x0F , 	0x00 , 	0x4A , 	0x3D , 	
-0x00 , 	0x7F , 	0xDA , 	0xE2 , 	
-0x00 , 	0xFF , 	0xB5 , 	0xBC , 	
-0x0F , 	0x80 , 	0x4A , 	0x36 , 	
-0x00 , 	0x00 , 	0x06 , 	0x64 , 	
+0x00 , 	0x7F , 	0xB5 , 	0xD2 , 	
+0x0F , 	0x00 , 	0x94 , 	0x5D , 	
+0x00 , 	0x7F , 	0xB5 , 	0xD2 , 	
+0x00 , 	0xFF , 	0x6B , 	0x87 , 	
+0x0F , 	0x80 , 	0x94 , 	0x40 , 	
+0x00 , 	0x00 , 	0x0C , 	0xC7 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x7F , 	0xF9 , 	0x9C , 	
+0x00 , 	0x7F , 	0xF3 , 	0x39 , 	
 0x00 , 	0x00 , 	0x08 , 	0x00 , 	
 0x01 , 	0x00 , 	0x00 , 	0x00 , 	
 0x01 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x09 , 	0x6F , 	
+0x00 , 	0x80 , 	0x00 , 	0x00 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x09 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x80 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x80 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x80 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x80 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x12 , 	0xDE , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x12 , 	
+0x00 , 	0x00 , 	0x12 , 	0xDE , 	
+0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x12 , 	
 0x00 , 	0x40 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x09 , 	0x6F , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x09 , 	
 0x00 , 	0x40 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x44 , 	0x00 , 	
+0x00 , 	0x00 , 	0x87 , 	0xB7 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x0F , 	0xFF , 	0xBC , 	0x00 , 	
-0x00 , 	0xFF , 	0x77 , 	0x75 , 	
-0x0F , 	0x80 , 	0x87 , 	0xFF , 	
-0x00 , 	0x01 , 	0x0E , 	0x50 , 	
+0x0F , 	0xFF , 	0x78 , 	0x49 , 	
+0x00 , 	0xFE , 	0xEE , 	0x62 , 	
+0x0F , 	0x81 , 	0x0F , 	0x6E , 	
+0x00 , 	0x02 , 	0x18 , 	0x35 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x0F , 	0xFE , 	0xF1 , 	0xB0 , 	
-0x00 , 	0xFD , 	0xDA , 	0xAD , 	
-0x0F , 	0x82 , 	0x1C , 	0xA0 , 	
-0x00 , 	0x04 , 	0x1F , 	0x31 , 	
+0x0F , 	0xFD , 	0xE7 , 	0xCB , 	
+0x00 , 	0xFB , 	0xAD , 	0x12 , 	
+0x0F , 	0x84 , 	0x30 , 	0x6A , 	
+0x00 , 	0x07 , 	0xFC , 	0xDE , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x0F , 	0xFB , 	0xE0 , 	0xCF , 	
-0x00 , 	0xF7 , 	0x39 , 	0xD1 , 	
-0x0F , 	0x88 , 	0x3E , 	0x62 , 	
-0x00 , 	0x0D , 	0xB3 , 	0x56 , 	
+0x0F , 	0xF8 , 	0x03 , 	0x22 , 	
+0x00 , 	0xED , 	0xF8 , 	0x95 , 	
+0x0F , 	0x8F , 	0xF9 , 	0xBD , 	
+0x00 , 	0x18 , 	0xCC , 	0x35 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x0F , 	0xF2 , 	0x4C , 	0xAA , 	
-0x00 , 	0xDE , 	0x48 , 	0x61 , 	
-0x0F , 	0x9B , 	0x66 , 	0xAC , 	
-0x00 , 	0x24 , 	0xC3 , 	0x11 , 	
+0x0F , 	0xE7 , 	0x33 , 	0xCB , 	
+0x00 , 	0xB7 , 	0xE8 , 	0x6B , 	
+0x0F , 	0xB1 , 	0x98 , 	0x6A , 	
+0x00 , 	0x3A , 	0xA1 , 	0xC9 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x0F , 	0xDB , 	0x3C , 	0xEF , 	
-0x00 , 	0x81 , 	0x07 , 	0xB1 , 	
-0x0F , 	0xC9 , 	0x86 , 	0x22 , 	
-0x00 , 	0x00 , 	0x09 , 	0x6F , 	
+0x0F , 	0xC5 , 	0x5E , 	0x37 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x09 , 	
-0x00 , 	0x00 , 	0x09 , 	0x6F , 	
+0x0F , 	0xF5 , 	0x43 , 	0x92 , 	
+0x00 , 	0x00 , 	0x12 , 	0xDE , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x09 , 	
-0x00 , 	0x00 , 	0x09 , 	0x6F , 	
+0x00 , 	0x00 , 	0x00 , 	0x12 , 	
+0x00 , 	0x00 , 	0x12 , 	0xDE , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x09 , 	
-0x00 , 	0x00 , 	0x09 , 	0x6F , 	
+0x00 , 	0x00 , 	0x00 , 	0x12 , 	
+0x00 , 	0x00 , 	0x12 , 	0xDE , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x09 , 	
-0x00 , 	0x00 , 	0x09 , 	0x6F , 	
+0x00 , 	0x00 , 	0x00 , 	0x12 , 	
+0x00 , 	0x00 , 	0x12 , 	0xDE , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x09 , 	
+0x00 , 	0x00 , 	0x00 , 	0x12 , 	
+0x00 , 	0x00 , 	0x12 , 	0xDE , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
-0x00 , 	0x00 , 	0x00 , 	0x00 , 	
+0x00 , 	0x00 , 	0x00 , 	0x12 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
 0x00 , 	0x00 , 	0x00 , 	0x00 , 	
@@ -1747,90 +1972,90 @@ See also 0_template.hex file
 Parameter data for: IC 1 (Binary format starting at parameter address 0)
 00001101	11101010	11011100	00001101	
 00000000	10000000	00000000	00000000	
-00000000	01111111	11011010	11100010	
-00001111	00000000	01001010	00111101	
-00000000	01111111	11011010	11100010	
-00000000	11111111	10110101	10111100	
-00001111	10000000	01001010	00110110	
-00000000	00000000	00000110	01100100	
+00000000	01111111	10110101	11010010	
+00001111	00000000	10010100	01011101	
+00000000	01111111	10110101	11010010	
+00000000	11111111	01101011	10000111	
+00001111	10000000	10010100	01000000	
+00000000	00000000	00001100	11000111	
 00000000	00000000	00000000	00000000	
-00000000	01111111	11111001	10011100	
+00000000	01111111	11110011	00111001	
 00000000	00000000	00001000	00000000	
 00000001	00000000	00000000	00000000	
 00000001	00000000	00000000	00000000	
-00000000	00000000	00001001	01101111	
+00000000	10000000	00000000	00000000	
 00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00001001	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	10000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	10000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	10000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	10000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00010010	11011110	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00010010	
+00000000	00000000	00010010	11011110	
+00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00010010	
 00000000	01000000	00000000	00000000	
-00000000	00000000	00001001	01101111	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00001001	
 00000000	01000000	00000000	00000000	
-00000000	00000000	01000100	00000000	
+00000000	00000000	10000111	10110111	
 00000000	00000000	00000000	00000000	
-00001111	11111111	10111100	00000000	
-00000000	11111111	01110111	01110101	
-00001111	10000000	10000111	11111111	
-00000000	00000001	00001110	01010000	
+00001111	11111111	01111000	01001001	
+00000000	11111110	11101110	01100010	
+00001111	10000001	00001111	01101110	
+00000000	00000010	00011000	00110101	
 00000000	00000000	00000000	00000000	
-00001111	11111110	11110001	10110000	
-00000000	11111101	11011010	10101101	
-00001111	10000010	00011100	10100000	
-00000000	00000100	00011111	00110001	
+00001111	11111101	11100111	11001011	
+00000000	11111011	10101101	00010010	
+00001111	10000100	00110000	01101010	
+00000000	00000111	11111100	11011110	
 00000000	00000000	00000000	00000000	
-00001111	11111011	11100000	11001111	
-00000000	11110111	00111001	11010001	
-00001111	10001000	00111110	01100010	
-00000000	00001101	10110011	01010110	
+00001111	11111000	00000011	00100010	
+00000000	11101101	11111000	10010101	
+00001111	10001111	11111001	10111101	
+00000000	00011000	11001100	00110101	
 00000000	00000000	00000000	00000000	
-00001111	11110010	01001100	10101010	
-00000000	11011110	01001000	01100001	
-00001111	10011011	01100110	10101100	
-00000000	00100100	11000011	00010001	
+00001111	11100111	00110011	11001011	
+00000000	10110111	11101000	01101011	
+00001111	10110001	10011000	01101010	
+00000000	00111010	10100001	11001001	
 00000000	00000000	00000000	00000000	
-00001111	11011011	00111100	11101111	
-00000000	10000001	00000111	10110001	
-00001111	11001001	10000110	00100010	
-00000000	00000000	00001001	01101111	
+00001111	11000101	01011110	00110111	
 00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00001001	
-00000000	00000000	00001001	01101111	
+00001111	11110101	01000011	10010010	
+00000000	00000000	00010010	11011110	
 00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00001001	
-00000000	00000000	00001001	01101111	
+00000000	00000000	00000000	00010010	
+00000000	00000000	00010010	11011110	
 00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00001001	
-00000000	00000000	00001001	01101111	
+00000000	00000000	00000000	00010010	
+00000000	00000000	00010010	11011110	
 00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00001001	
-00000000	00000000	00001001	01101111	
+00000000	00000000	00000000	00010010	
+00000000	00000000	00010010	11011110	
 00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00001001	
+00000000	00000000	00000000	00010010	
+00000000	00000000	00010010	11011110	
 00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
-00000000	00000000	00000000	00000000	
+00000000	00000000	00000000	00010010	
 00000000	00000000	00000000	00000000	
 00000000	00000000	00000000	00000000	
 00000000	00000000	00000000	00000000	

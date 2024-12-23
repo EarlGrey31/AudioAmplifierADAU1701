@@ -1,7 +1,7 @@
 /*
  * File:           C:\Users\PaulH\Documents\Arduino\AudioAmplifierADAU1701\SigmaStudio_project\Export\0_template_IC_1_REG.h
  *
- * Created:        Monday, December 23, 2024 2:07:57 PM
+ * Created:        Monday, December 23, 2024 3:55:34 PM
  * Description:    0_template:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,
@@ -88,7 +88,7 @@
 /* CoreRegister  - Registers (IC 1) */
 #define REG_COREREGISTER_IC_1_ADDR                0x81C
 #define REG_COREREGISTER_IC_1_BYTE                2
-#define REG_COREREGISTER_IC_1_VALUE               0x1D
+#define REG_COREREGISTER_IC_1_VALUE               0x1C
 
 /* RAMRegister  - Registers (IC 1) */
 #define REG_RAMREGISTER_IC_1_ADDR                 0x81D
@@ -251,7 +251,7 @@
 #define R12_ADC3_IC_1_SHIFT                       0
 
 /* CoreRegister (IC 1) */
-#define R13_PROGRAM_LENGTH_IC_1                   0x1    /* 01b	[1:0] */
+#define R13_PROGRAM_LENGTH_IC_1                   0x0    /* 00b	[1:0] */
 #define R13_REGISTER_ZERO_IC_1                    0x1    /* 1b	[2] */
 #define R13_MUTE_DAC_IC_1                         0x1    /* 1b	[3] */
 #define R13_MUTE_ADC_IC_1                         0x1    /* 1b	[4] */
