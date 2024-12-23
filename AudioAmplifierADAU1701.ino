@@ -45,6 +45,10 @@ uint16_t voutForVcc(float vcc, float vref = 3.3, float R1=10e3, float R2=150e3) 
 
 uint8_t __cnt;
 
+float fixed2float(uint32_t val) {
+  return float(val)/float(1<<19);
+}
+
 void updateFrontpanel() {
   uint32_t currentLevelCH0  = dsp.readBack(MOD_CH0_RMS_ALG0_VAL0_ADDR,  MOD_CH0_RMS_ALG0_VAL0_VALUES,  3);
   uint32_t currentLevelCH1  = dsp.readBack(MOD_CH1_RMS_ALG0_VAL0_ADDR,  MOD_CH1_RMS_ALG0_VAL0_VALUES,  3);
@@ -116,6 +120,13 @@ void checkSupplyLevels() {
       vee_good = true;
     }
   }
+}
+
+void printStatus() {
+  uint32_t balance  = dsp.readBack(MOD_BALANCEADC_ALG0_VAL0_ADDR,  MOD_BALANCEADC_ALG0_VAL0_VALUES,  3);
+  uint32_t volume  = dsp.readBack(MOD_VOLUMEADC_ALG0_VAL0_ADDR,  MOD_VOLUMEADC_ALG0_VAL0_VALUES,  3);
+  Serial.printf("Balance: %f\n", fixed2float(balance));
+  Serial.printf("Volume: %f\n", fixed2float(volume));
 }
 
 void setup() {
@@ -192,6 +203,7 @@ void loop() {
   if (__cnt > 10) {
     __cnt = 0;
     checkSupplyLevels();
+    printStatus();
   }
   digitalWrite(PIN_STATUS, !digitalRead(PIN_STATUS));
 }

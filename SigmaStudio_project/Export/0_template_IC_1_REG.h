@@ -1,7 +1,7 @@
 /*
  * File:           C:\Users\PaulH\Documents\Arduino\AudioAmplifierADAU1701\SigmaStudio_project\Export\0_template_IC_1_REG.h
  *
- * Created:        Sunday, December 22, 2024 10:30:07 PM
+ * Created:        Monday, December 23, 2024 2:07:57 PM
  * Description:    0_template:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,
@@ -113,7 +113,7 @@
 /* MpCfg1  - Registers (IC 1) */
 #define REG_MPCFG1_IC_1_ADDR                      0x821
 #define REG_MPCFG1_IC_1_BYTE                      3
-#define REG_MPCFG1_IC_1_VALUE                     0x0
+#define REG_MPCFG1_IC_1_VALUE                     0xFF00
 
 /* AnalogPowerDownRegister  - Registers (IC 1) */
 #define REG_ANALOGPOWERDOWNREGISTER_IC_1_ADDR     0x822
@@ -373,10 +373,10 @@
 #define R18_MFINVERT6_IC_1                        0x0    /* 0b	[3] */
 #define R18_MFSELECT7_IC_1                        0x0    /* 000b	[6:4] */
 #define R18_MFINVERT7_IC_1                        0x0    /* 0b	[7] */
-#define R18_MFSELECT8_IC_1                        0x0    /* 000b	[10:8] */
-#define R18_MFINVERT8_IC_1                        0x0    /* 0b	[11] */
-#define R18_MFSELECT9_IC_1                        0x0    /* 000b	[14:12] */
-#define R18_MFINVERT9_IC_1                        0x0    /* 0b	[15] */
+#define R18_MFSELECT8_IC_1                        0x7    /* 111b	[10:8] */
+#define R18_MFINVERT8_IC_1                        0x1    /* 1b	[11] */
+#define R18_MFSELECT9_IC_1                        0x7    /* 111b	[14:12] */
+#define R18_MFINVERT9_IC_1                        0x1    /* 1b	[15] */
 #define R18_MFSELECT10_IC_1                       0x0    /* 000b	[18:16] */
 #define R18_MFINVERT10_IC_1                       0x0    /* 0b	[19] */
 #define R18_MFSELECT11_IC_1                       0x0    /* 000b	[22:20] */
