@@ -1,6 +1,7 @@
 // Include Wire and SigmaDSP library
 #include <Wire.h>
 #include <SigmaDSP.h>
+#include <Rotary.h>
 #include "frontpanel.h"
 #include "gui.h"
 // Include generated parameter file
@@ -13,6 +14,9 @@
 #define PIN_MUTE_B 10
 #define PIN_RELAY_ON 11
 #define PIN_STATUS 12
+
+#define PIN_ROTARY0 6
+#define PIN_ROTARY1 7
 
 #define I2C_SDA_ADAU 16
 #define I2C_SCL_ADAU 17
@@ -139,7 +143,7 @@ void setup() {
 
   frontpanel = new Frontpanel();
 
-  gui = new GUI(&dsp, frontpanel);
+  gui = new GUI(&dsp, frontpanel, PIN_ROTARY0, PIN_ROTARY1);
   //frontpanel->printAddresses();
 
   vcc_threshold_low = voutForVcc(25);
