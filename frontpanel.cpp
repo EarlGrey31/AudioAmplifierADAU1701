@@ -11,6 +11,12 @@
 #define TCA9555_CONFIGURATION_PORT_0      0x06    //  pinMode()
 #define TCA9555_CONFIGURATION_PORT_1      0x07
 
+#define FRONTPANEL_BUTTON_BAND0 70
+#define FRONTPANEL_BUTTON_BAND1 71
+#define FRONTPANEL_BUTTON_BAND2 72
+#define FRONTPANEL_BUTTON_BAND3 73
+#define FRONTPANEL_BUTTON_BAND4 74
+
 FrontpanelTCA9555Wrapper::FrontpanelTCA9555Wrapper(uint8_t address, TwoWire *wire): TCA9555(address, wire) {read();}
 
 bool FrontpanelTCA9555Wrapper::pinMode1(uint8_t pin, uint8_t mode) {
@@ -162,10 +168,10 @@ uint8_t FrontpanelTCA9555Wrapper::getPolarity16() {
 }
 
 void FrontpanelTCA9555Wrapper::read() {
-  _ddr = ((uint16_t)(readRegister(TCA9555_CONFIGURATION_PORT_1))<<8) || readRegister(TCA9555_CONFIGURATION_PORT_0);
-  _idr = ((uint16_t)(readRegister(TCA9555_INPUT_PORT_REGISTER_1))<<8) || readRegister(TCA9555_INPUT_PORT_REGISTER_0);
-  _odr = ((uint16_t)(readRegister(TCA9555_OUTPUT_PORT_REGISTER_1))<<8) || readRegister(TCA9555_OUTPUT_PORT_REGISTER_0);
-  _pdr = ((uint16_t)(readRegister(TCA9555_POLARITY_REGISTER_1))<<8) || readRegister(TCA9555_POLARITY_REGISTER_0);
+  _ddr = ((uint16_t)(readRegister(TCA9555_CONFIGURATION_PORT_1))<<8) | readRegister(TCA9555_CONFIGURATION_PORT_0);
+  _idr = ((uint16_t)(readRegister(TCA9555_INPUT_PORT_REGISTER_1))<<8) | readRegister(TCA9555_INPUT_PORT_REGISTER_0);
+  _odr = ((uint16_t)(readRegister(TCA9555_OUTPUT_PORT_REGISTER_1))<<8) | readRegister(TCA9555_OUTPUT_PORT_REGISTER_0);
+  _pdr = ((uint16_t)(readRegister(TCA9555_POLARITY_REGISTER_1))<<8) | readRegister(TCA9555_POLARITY_REGISTER_0);
 }
 
 void FrontpanelTCA9555Wrapper::write() {
@@ -203,6 +209,18 @@ Frontpanel::Frontpanel():portExtenders{FrontpanelTCA9555Wrapper(0b0100000, &Wire
     uint8_t pin = portBitFromGPIO(i);
     this->portExtenders[index].pinMode1(pin, OUTPUT);
   }
+
+  for (int i = FRONTPANEL_NBR_LEDS; i < (FRONTPANEL_NBR_TCA*FRONTPANEL_GPIO_PER_TCA); i++) {
+    uint8_t index = indexForGPIO(i);
+    uint8_t pin = portBitFromGPIO(i);
+    this->portExtenders[index].pinMode1(pin, INPUT);
+  }
+
+  this->portExtenders[indexForGPIO(FRONTPANEL_BUTTON_BAND0)].setPolarity(portBitFromGPIO(FRONTPANEL_BUTTON_BAND0), HIGH);
+  this->portExtenders[indexForGPIO(FRONTPANEL_BUTTON_BAND1)].setPolarity(portBitFromGPIO(FRONTPANEL_BUTTON_BAND1), HIGH);
+  this->portExtenders[indexForGPIO(FRONTPANEL_BUTTON_BAND2)].setPolarity(portBitFromGPIO(FRONTPANEL_BUTTON_BAND2), HIGH);
+  this->portExtenders[indexForGPIO(FRONTPANEL_BUTTON_BAND3)].setPolarity(portBitFromGPIO(FRONTPANEL_BUTTON_BAND3), HIGH);
+  this->portExtenders[indexForGPIO(FRONTPANEL_BUTTON_BAND4)].setPolarity(portBitFromGPIO(FRONTPANEL_BUTTON_BAND4), HIGH);
 
   for (int i = 0; i < FRONTPANEL_NBR_LEDS; i++) {
     uint8_t index = indexForGPIO(i);
@@ -345,4 +363,18 @@ uint8_t Frontpanel::portBitFromGPIO(uint8_t gpio) {
 
 void Frontpanel::write16raw(uint8_t index, uint16_t mask) {
   this->portExtenders[index].write16(mask);
+}
+
+uint8_t Frontpanel::getGPIOState(uint8_t gpio) {
+  uint8_t idx = indexForGPIO(gpio);
+  uint8_t bit = portBitFromGPIO(gpio);
+  return this->portExtenders[idx].read1(bit);
+}
+
+uint8_t Frontpanel::getButtonStates() {
+  return (getGPIOState(FRONTPANEL_BUTTON_BAND4) << 4) |
+    (getGPIOState(FRONTPANEL_BUTTON_BAND3) << 3) |
+    (getGPIOState(FRONTPANEL_BUTTON_BAND2) << 2) |
+    (getGPIOState(FRONTPANEL_BUTTON_BAND1) << 1) |
+    getGPIOState(FRONTPANEL_BUTTON_BAND0);
 }

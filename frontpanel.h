@@ -7,6 +7,7 @@
 #define FRONTPANEL_NBR_TCA 5
 #define FRONTPANEL_GPIO_PER_TCA 16
 #define FRONTPANEL_NBR_LEDS 70
+#define FRONTPANEL_NBR_EQ_BANDS 5
 
 class FrontpanelTCA9555Wrapper : public TCA9555 {
   private:
@@ -70,5 +71,7 @@ class Frontpanel
     void printAddresses();
     void printRegisters();
     void write16raw(uint8_t index, uint16_t mask);
+    uint8_t getGPIOState(uint8_t gpio);
+    uint8_t getButtonStates();
 };
 #endif
