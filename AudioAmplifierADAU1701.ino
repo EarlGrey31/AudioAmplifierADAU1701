@@ -28,7 +28,7 @@
 // The second parameter is the DSP i2c address, which is defined in the parameter file
 // The third parameter is the sample rate
 // An optional fourth parameter is the pin to physically reset the DSP
-SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 96000.00f, PIN_ADAU_RST);
+SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 48000.00f, PIN_ADAU_RST);
 Frontpanel *frontpanel;
 GUI *gui;
 

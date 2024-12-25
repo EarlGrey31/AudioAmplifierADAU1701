@@ -3,16 +3,18 @@
 GUI::GUI(SigmaDSP *dsp, Frontpanel *frontpanel, uint8_t rotary_pin0, uint8_t rotary_pin1): _dsp{dsp}, _frontpanel{frontpanel}, 
   _led_left{0}, _led_right{0}, _led_eq_band{0,0,0,0,0}, _state{STARTUP},
   _eq_band_selected{-1}, _rotary{Rotary(rotary_pin0,rotary_pin1)} {
-    for (int i = 0; i < NBR_EQ_FREQ_BANDS; i++) {
-      _eq_filters[i].filterType = parameters::filterType::peaking;
-      _eq_filters[i].gain = 0;
-      _eq_filters[i].gain = 1.414;
-    }
     _eq_filters[0].freq = 62.5;
     _eq_filters[1].freq = 250;
     _eq_filters[2].freq = 1000;
     _eq_filters[3].freq = 3600;
     _eq_filters[4].freq = 12000;
+    for (int i = 0; i < NBR_EQ_FREQ_BANDS; i++) {
+      _eq_filters[i].filterType = parameters::filterType::peaking;
+      _eq_filters[i].Q = 1.414;
+      _eq_filters[i].gain = 0;
+      _eq_filters[i].boost = 0;
+      _eq_filters[i].state = parameters::state::on;
+    }
 }
 
 void GUI::updateLeds() {
@@ -101,8 +103,28 @@ void GUI::handleStatesEQ_BAND_ENTER() {
 void GUI::handleStatesEQ_BAND_SELECTED() {
   calculateSignalLevels();
   // ToDo
-  _eq_filters[_eq_band_selected].gain = (float)(_rotary.getPosition())*0.5;
-  _led_eq_band[_eq_band_selected] = (uint8_t)((_eq_filters[_eq_band_selected].gain + 10)*0.5+0.5);
+  _eq_filters[_eq_band_selected].boost = (float)(_rotary.getPosition())*0.5;
+  _eq_filters[_eq_band_selected].state = parameters::state::on;
+  uint16_t eq_addr = MOD_MIDEQ1_ALG0_STAGE0_B0_ADDR;
+  switch (_eq_band_selected) {
+    case 0:
+      eq_addr = MOD_MIDEQ1_ALG0_STAGE0_B0_ADDR;
+      break;
+    case 1:
+      eq_addr = MOD_MIDEQ1_ALG0_STAGE1_B0_ADDR;
+      break;
+    case 2:
+      eq_addr = MOD_MIDEQ1_ALG0_STAGE2_B0_ADDR;
+      break;
+    case 3:
+      eq_addr = MOD_MIDEQ1_ALG0_STAGE3_B0_ADDR;
+      break;
+    case 4:
+      eq_addr = MOD_MIDEQ1_ALG0_STAGE4_B0_ADDR;
+      break;
+  }
+  _dsp->EQsecondOrder(eq_addr, _eq_filters[_eq_band_selected]);
+  _led_eq_band[_eq_band_selected] = (uint8_t)((_eq_filters[_eq_band_selected].boost + 10)*0.5+0.5);
   updateLeds();
   uint8_t buttons = _frontpanel->getButtonStates();
   if (buttons == 0) {
