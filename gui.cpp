@@ -114,7 +114,6 @@ void GUI::handleStatesEQ_BAND_EXIT() {
 }
 
 void GUI::handleStates() {
-  Serial.printf("Current State: %d\n", _state);
   switch (_state) {
     case STARTUP:
       handleStatesSTARTUP();
