@@ -1,0 +1,24 @@
+#TODO
+
+#Mute The amps
+#Enable Raspi-bluetooth
+#Switch CDC into VCXO  MOde
+/ Offset 01h Bit 3:2 -> 01
+/8bit -> 0101 =5h
+#While (lock detect !=1) == GPIO 9
+# CHange load cap
+/offset 05h Bits 7:3b+00b
+/dh 4,8,C...
+#wait delay X
+MAX is 20h if max is reached...be unhappy
+else: be happy
+
+Unmute the amps
+
+I2C Writing
+Normal Write
+
+3 Cycles
+1: Adress+R/W
+2: OP Code = 1(Byte read/write)+offset = 1+6:0+R/W bit
+3: Info
